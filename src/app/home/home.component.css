@@ -1,0 +1,69 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+   
+    color: #fff;
+    background: linear-gradient( 0deg, #f27b7b,#353434 );
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding:0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.app-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 100;
+}
+
+.enter-button {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border-radius: 100%;
+  /*background: radial-gradient(#905a5a, #995b5b);*/
+  animation-name: stretch;
+  animation-duration: 1.75s; 
+  animation-timing-function: ease-in; 
+  animation-delay: 1;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.7);
+    background-color: rgba(154,94,94,0.5);
+    border-radius: 100%;
+  }
+  25% {
+    transform: scale(.7);
+    background-color: rgba(255,255,255,0.1);  
+  }
+  50% {
+    transform: scale(.7);
+    background-color: rgba(255,255,255,0.1);
+  }
+  100% {
+    transform: scale(1.2);
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100%
+  }
+}
+
+.tap-message {
+    text-align: center;
+    font-weight: 100;
+    font-size: 32px;
+    line-height: 32px;
+}
