@@ -3,21 +3,18 @@
 @Component({
   selector: 'app-root',
   template: `
-    <h1>{{title}}</h1>
-    
-    <p>You have clicked the button {{clickCount}} times</p>
-    <p>New Title: <input [(ngModel)]="newTitle"></p>
-    <button (click)="changeTitle()">Change that title </button>
+    Mars Colony
+    <a routerLink="/register">Register page</a>
+    <a routerLink="/encounters">Encounters page</a>
+    <a routerLink="/report">Report page</a>
+    <a routerLink="/notfound">Not found page</a>
+    <div class = "page">
+      <router-outlet></router-outlet>
+    </div>
   `,  
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-  clickCount =0;
-  newTitle= '';
-  changeTitle(event){
-    this.title = this.newTitle;
-    this.clickCount++;
-  }
+  
   
 }
