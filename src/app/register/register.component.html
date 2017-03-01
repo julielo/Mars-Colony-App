@@ -2,11 +2,19 @@
   <h2 class="title">Register</h2>
   <form class="register_form">
     <fieldset>
-    <input type="text" ng-model="" placeholder="Name"/>
-    <input type="text" ng-model="" placeholder="Age" />
-    <input type="text" ng-model="" placeholder="Select occupation" />
+      <input type="text" ng-model="" placeholder="Name"/>
+      <input type="text" ng-model="" placeholder="Age" />
+      <select class="select-occupation" name="select occupation">
+        <option value="alienHunter">Alien Hunter</option>
+        <option value="yogaTeacher">Yoga Teacher</option>
+        <option value="dustFarmer">Dust Farmer</option>
+        <option value="feDeveloper">Front-end Developer</option>
+      </select>
+      <!--<input type="text" ng-model="" placeholder="Select occupation" />-->
+    </fieldset>
+    <fieldset class="reg-button">
+      <button class="register-button" type="submit" ng-model="">Register</button>
     </fieldset>
   </form>
-  <h2 class="title">Check in</h2>
 </div>
 
