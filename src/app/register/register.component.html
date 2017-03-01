@@ -4,7 +4,7 @@
     <fieldset>
       <input type="text" ng-model="" placeholder="Name"/>
       <input type="text" ng-model="" placeholder="Age" />
-      <select class="select-occupation" name="select occupation">
+      <select class="select-occupation" name="select occupation" placeholder="select occupation">
         <option value="alienHunter">Alien Hunter</option>
         <option value="yogaTeacher">Yoga Teacher</option>
         <option value="dustFarmer">Dust Farmer</option>
@@ -13,7 +13,7 @@
       <!--<input type="text" ng-model="" placeholder="Select occupation" />-->
     </fieldset>
     <fieldset class="reg-button">
-      <button class="register-button" type="submit" ng-model="">Register</button>
+      <a routerLink="/encounters"><button class="register-button" type="submit" ng-model="">Check in</button></a>
     </fieldset>
   </form>
 </div>
