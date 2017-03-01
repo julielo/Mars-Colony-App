@@ -16,22 +16,28 @@
     padding: 50px;
 }
 
+fieldset {
+ 
+}
+
 input {
     display: block;
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    /*font-family: "Roboto", sans-serif;*/
+    font-size: 18px;
     background: #000;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid white;
-    width: 100vw;
-    margin: 50px;
+    width: 93vw;
+    padding-top: 30px;
+    padding-left: 10px;
+    margin-left: 30px;
    
 }
 
 input::-webkit-input-placeholder {
-  color: red;
+  color: #ed403e;
 }
 
 /*form {
