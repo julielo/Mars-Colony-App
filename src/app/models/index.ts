@@ -30,6 +30,13 @@ export class NewEncounter {
     date: string;
     action: string;
     colonist_id: string;
+
+    constructor(atype: string, date: string, action: string, colonist_id: string) {
+        this.atype = atype;
+        this.date = date;
+        this.action = action;
+        this.colonist_id = colonist_id;
+    }
 }
 
 export interface Alien {

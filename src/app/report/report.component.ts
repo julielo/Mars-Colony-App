@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewEncounter, Alien, Colonist } from '../models';
+import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-report',
@@ -11,6 +12,7 @@ export class ReportComponent implements OnInit {
   newEncounter: NewEncounter;
   alienType: Alien[];
   colonist: Colonist[];
+  reportForm: FormGroup;
 
   constructor() { 
 
@@ -20,14 +22,21 @@ export class ReportComponent implements OnInit {
     {type: 'Endomorph', submitted_by: '2', id: 3, description: 'Doooood'},
     ];
 
-  this.colonist = [
-    {name: 'Barney', id: 3, age: 43, job: 'Job'},
-    {name: 'Bob', id: 1, age: 35, job: 'job'},
-    {name: 'Jane', id: 2, age: 20, job: 'Job'},
-  ];
-
+  this.reportForm = new FormGroup ({
+    atype: new FormControl(''),
+  })
   
-  }
+
+  // this.colonist = [
+  //   {name: 'Barney', id: 3, age: 43, job: marsJobs.job[] },
+  //   {name: 'Bob', id: 1, age: 35, job: 'job'},
+  //   {name: 'Jane', id: 2, age: 20, job: 'Job'},
+  // ];  
+}
+
+logAlien() {
+  console.log(this.reportForm);
+}
 
   ngOnInit() {
   }

@@ -3,10 +3,11 @@
     <h2 class="title">Report Encounter</h2>
     <p>Safety on Mars is your responsibility</p>
   </div>
+  <form [formGroup]="reportForm" [ngClass]="{ invalid: reportForm.invalid }" class="report_form">    
   <div class="alien-list">
-      <select required class="alien-type" >          
+      <select required class="alien-type" formControlName="atype" name="atype">          
         <option value="">Select alien type</option>
-        <option *ngFor="let job of marsJobs" value="{{ job.id }}">{{ job.name }}</option>        
+        <option *ngFor="let alien of alienType" value="{{ alien.type }}">{{ alien.type }}</option>        
       </select>
 
     <!--<select class="alien-type" name="alien-type">
@@ -19,9 +20,9 @@
       <textarea>Action taken</textarea>
   </div>
   <div class = "submit-btn">
-          <!--<button type="button" (click)="logColonist()" >Log colonist</button>-->
+          <button type="button" (click)="logAlien()" >Log alien</button>
 
     <button class="submit-button">Submit Report</button>
   </div>
+  </form>
 </div>
-<!--formControlName="job_id" name="job_id"-->
