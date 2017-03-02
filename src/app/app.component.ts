@@ -3,7 +3,7 @@
 @Component({
   selector: 'app-root',
   template: `
-   <router-outlet></router-outlet>, 
+   <router-outlet></router-outlet> 
 `,    
   styleUrls: ['./app.component.scss']
 })
