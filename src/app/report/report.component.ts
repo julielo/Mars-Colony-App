@@ -24,6 +24,7 @@ export class ReportComponent implements OnInit {
 
   this.reportForm = new FormGroup ({
     atype: new FormControl(''),
+    action: new FormControl(''),
   })
   
 
