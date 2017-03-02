@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NewColonist, Job } from '../models';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
+import { JOBS_URL, COLONISTS_URL } from '../models/API'
+
 
 @Component({
   selector: 'app-register',
@@ -16,12 +18,7 @@ registerForm: FormGroup;
   constructor() { 
     //TODO: Call API, get jobs.
     
-    this.marsJobs = [
-      {name: 'Alien Hunter', id: 1, description: 'Hunts aliens' }, 
-      {name: 'Dust Farmer', id: 2, description: 'Dust lover'},    
-      { name: 'Yoga Teacher', id: 3, description: 'Bendy like Gumby'},
-    ]; 
-
+    
     this.registerForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.maxLength(100)]),
       age: new FormControl('', [Validators.required, this.acceptAge(18, 50)]),
