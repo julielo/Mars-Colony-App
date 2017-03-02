@@ -23,8 +23,8 @@ export class ReportComponent implements OnInit {
     ];
 
   this.reportForm = new FormGroup ({
-    atype: new FormControl(''),
-    action: new FormControl(''),
+    atype: new FormControl('', [Validators.required]),
+    action: new FormControl('', [Validators.required, Validators.maxLength(100)]),
   })
   
 
@@ -34,6 +34,8 @@ export class ReportComponent implements OnInit {
   //   {name: 'Jane', id: 2, age: 20, job: 'Job'},
   // ];  
 }
+
+
 
 logAlien() {
   console.log(this.reportForm);

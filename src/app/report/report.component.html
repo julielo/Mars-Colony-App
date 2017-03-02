@@ -5,7 +5,7 @@
   </div>
   <form [formGroup]="reportForm" [ngClass]="{ invalid: reportForm.invalid }" class="report_form">    
   <div class="alien-list">
-      <select required class="alien-type" formControlName="atype" name="atype">          
+      <select required class="alien-type" formControlName="atype" name="alienType">          
         <option value="">Select alien type</option>
         <option *ngFor="let alien of alienType" value="{{ alien.type }}">{{ alien.type }}</option>        
       </select>
@@ -17,7 +17,7 @@
         <option value="thePredator">The Predator</option>-->
       <!--</select>-->
 
-      <textarea class="alien-action">Action taken</textarea>
+      <textarea class="alien-action" required formControlName="action" name="alienAction">Action taken</textarea>
   </div>
   <div class = "submit-btn">
           <button type="button" (click)="logAlien()" >Log alien</button>
