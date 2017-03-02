@@ -1,16 +1,18 @@
 <div class = "page">
   <h2 class="title">Register</h2>
-  <form class="register_form">
+  
+  <form [formGroup]="registerForm" [ngClass]="{ invalid: registerForm.invalid }" class="register_form">    
     <fieldset>
-      <input type="text" ng-model="" placeholder="Name"/>
-      <input type="number" ng-model="" placeholder="Age" />
-      <select class="select-occupation" name="select occupation">
-          <select required>
-              <option value="(none)">Select an occupation</option>
+      <input type="text" placeholder="Name" required formControlName="name" name="colonistName" >/>
+      <input type="number" placeholder="Age" formControlName="age" name="colonistAge" />
+      <select required class="select-occupation" formControlName="job_id" name="job_id">          
+        <option value="">Select occupation</option>
+        <option *ngFor="let job of marsJobs" value="{{ job.id }}">{{ job.name }}</option>        
       </select>
     </fieldset>
-    <fieldset class="reg-button">
-      <a routerLink="/encounters"><button class="register-button" type="submit" ng-model="">Check in</button></a>
+    <fieldset class="reg-btn">
+      <button type="button" (click)="logColonist()" >Log colonist</button>
+      <a routerLink="/encounters"><button class="register-button" type="button" >Check in</button></a>
     </fieldset>
   </form>
 </div>
