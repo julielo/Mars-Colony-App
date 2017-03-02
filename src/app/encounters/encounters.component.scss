@@ -21,14 +21,24 @@ p {
     text-align: center;
 }
 
+.encounters-list {
+    text-align: left;
+    height: 100vh;
+}
+
+.report-btn {
+    padding-top: 25px;
+    text-align: center;
+    background: #000;
+    width: 100vw;
+ 
+}
+
 .report-button {
+    font-family: "Roboto", sans-serif;
     background-color: #000;
     color: #fff;
     font-size: 35px;
     padding: 50px;
-}
-
-.encounters-list {
-    text-align: left;
-    height: 100vh;
+    border: 0;
 }
