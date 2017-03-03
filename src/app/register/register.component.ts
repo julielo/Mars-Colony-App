@@ -3,14 +3,16 @@ import { NewColonist, Job } from '../models';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { JOBS_URL, COLONISTS_URL } from '../models/API'
 import { ColonistAPIService } from '../apiService/colonist';
+import { JobsAPIService } from '../apiService/jobs';
 import { Http, Response } from '@angular/http';
+
 
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
-  providers: [ColonistAPIService]
+  providers: [ColonistAPIService, JobsAPIService ]
 })
 export class RegisterComponent implements OnInit {
 
@@ -18,7 +20,10 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   clickedButton: boolean;
 
-  constructor(private colonistApiService: ColonistAPIService) { 
+  constructor(
+    private colonistApiService: ColonistAPIService,
+    private jobsAPIService: JobsAPIService
+    ) { 
     //TODO: Call API, get jobs.
     
     this.getMarsJobs();
@@ -44,7 +49,13 @@ export class RegisterComponent implements OnInit {
   }
 
   getMarsJobs() {
-    console.log('Getting jobs...');
+    this.jobsAPIService.getMarsJobs()
+                      .subscribe((result) => {
+                        console.log('Got mars jobs!', result);
+                        // const responseObject: any = result;
+                        // responseObject.jobs = this.marsJobs;
+                        this.marsJobs = result;
+                      });
 
   }
 

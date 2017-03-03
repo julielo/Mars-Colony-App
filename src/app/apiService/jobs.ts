@@ -9,11 +9,13 @@ import { Job } from '../models';
 import { JOBS_URL } from '../models/API'
 
 @Injectable()
-export class JobAPIService {
+export class JobsAPIService {
 
     constructor(private http: Http) {}
     
     getMarsJobs(): Observable<Job[]> {
+        return this.http.get(JOBS_URL)
+            .map((res: Response) => res.json().jobs);
 
     }
 }
