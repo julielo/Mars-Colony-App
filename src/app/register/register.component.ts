@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NewColonist, Job } from '../models';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import { JOBS_URL, COLONISTS_URL } from '../models/API'
+import { JOBS_URL, COLONISTS_URL } from '../models/API';
 import { ColonistAPIService } from '../apiService/colonist';
 import { JobsAPIService } from '../apiService/jobs';
 import { Http, Response } from '@angular/http';
-
 
 
 @Component({
@@ -24,7 +23,6 @@ export class RegisterComponent implements OnInit {
     private colonistApiService: ColonistAPIService,
     private jobsAPIService: JobsAPIService
     ) { 
-    //TODO: Call API, get jobs.
     
     this.getMarsJobs();
     this.clickedButton = false;
@@ -52,18 +50,15 @@ export class RegisterComponent implements OnInit {
     this.jobsAPIService.getMarsJobs()
                       .subscribe((result) => {
                         console.log('Got mars jobs!', result);
-                        // const responseObject: any = result;
-                        // responseObject.jobs = this.marsJobs;
                         this.marsJobs = result;
                       });
-
   }
 
   postNewColonist(event) {
     event.preventDefault();
     console.log('Posting new colonist');
-    if(!this.registerForm.invalid) {
-      // the form is invalid
+    if(this.registerForm.invalid) {
+     console.log('form is invalid!');
 
     } else {
       const name: string = this.registerForm.get('name').value;
