@@ -3,24 +3,20 @@
     <h2 class="title">Report Encounter</h2>
     <p>Safety on Mars is your responsibility</p>
   </div>
-  <form [formGroup]="reportForm" [ngClass]="{ invalid: reportForm.invalid }" class="report_form">    
+  <form [formGroup]="reportForm"
+    class="report_form"
+    [ngClass]="{ 'submitting': submitting }"
+    (ngSubmit) = "postNewEncounter($event)">    
   <div class="alien-list">
-      <select required class="alien-type" formControlName="atype" name="alienType">          
+      <select class="alien-type" formControlName="colonist_id" name="colonist_id">          
         <option value="">Select alien type</option>
-        <option *ngFor="let alien of alienType" value="{{ alien.type }}">{{ alien.type }}</option>        
+        <option *ngFor="let alien of alienType" value="{{ alien.id }}">{{ alien.type }}</option>        
       </select>
-
-    <!--<select class="alien-type" name="alien-type">
-        <option value="specialK">Special K</option>
-        <option value="endomorph">Endomorph</option>
-        <option value="octospider">Octospider</option>
-        <option value="thePredator">The Predator</option>-->
-      <!--</select>-->
 
       <textarea class="alien-action" required formControlName="action" name="alienAction">Action taken</textarea>
   </div>
   <div class = "submit-report-btn">
-          <button type="button" (click)="logAlien()" >Log alien</button>
+          <!--<button type="button" (click)="logAlien()" >Log alien</button>-->
 
     <button class="submit-report-button">Submit Report</button>
   </div>
