@@ -8,9 +8,9 @@
     [ngClass]="{ 'submitting': submitting }"
     (ngSubmit) = "postNewEncounter($event)">    
   <div class="alien-list">
-      <select class="alien-type" formControlName="colonist_id" name="colonist_id">          
+      <select class="alien-type" formControlName="atype" name="atype">          
         <option value="">Select alien type</option>
-        <option *ngFor="let alien of alienType" value="{{ alien.id }}">{{ alien.type }}</option>        
+        <option *ngFor="let alien of alienTypes" value="{{ alien.id }}">{{ alien.type }}</option>        
       </select>
 
       <textarea class="alien-action" required formControlName="action" name="alienAction">Action taken</textarea>
