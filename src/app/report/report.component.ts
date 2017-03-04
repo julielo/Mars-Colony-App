@@ -52,7 +52,7 @@ postNewEncounter(event) {
 
     } else {
       const atype: string = this.reportForm.get('atype').value;
-      const date = new Date().toString();
+      const date = new Date().toISOString().substring(0,10);
       const action: string = this.reportForm.get('action').value;
       const colonist_id = '501';      
 
