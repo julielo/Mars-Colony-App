@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NewEncounter, Alien, Colonist } from '../models';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { ALIENS_URL, ENCOUNTERS_URL } from '../models/API';
@@ -20,7 +21,8 @@ export class ReportComponent implements OnInit {
 
   constructor(
     private aliensAPIService: AliensAPIService,
-    private encountersAPIService: EncountersAPIService
+    private encountersAPIService: EncountersAPIService,
+    private router: Router
   ) { 
 
     this.getAlienTypes();
@@ -61,6 +63,7 @@ postNewEncounter(event) {
       this.encountersAPIService.saveNewEncounter( encounterPostRequest )
                               .subscribe((result) => {
                               console.log('Encounter was saved:', result);
+      this.router.navigate(['encounters']);
                               }); 
     }   
   }

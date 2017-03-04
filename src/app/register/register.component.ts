@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NewColonist, Job } from '../models';
 import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { JOBS_URL, COLONISTS_URL } from '../models/API';
@@ -21,7 +22,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private colonistApiService: ColonistAPIService,
-    private jobsAPIService: JobsAPIService
+    private jobsAPIService: JobsAPIService,
+    private router: Router
     ) { 
     
     this.getMarsJobs();
@@ -69,7 +71,9 @@ export class RegisterComponent implements OnInit {
       this.colonistApiService.saveColonist({ colonist: newColonist })
                               .subscribe((result) => {
                               console.log('Colonist was saved:', result);
-                              }); 
+      this.router.navigate(['encounters']);
+                            }); 
+      
     }   
   }
 }
