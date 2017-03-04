@@ -1,19 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { Encounter, Alien } from '../models';
-import { FormGroup, FormControl, FormBuilder, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
-import { ENCOUNTERS_URL, ALIENS_URL } from '../models/API';
+import { Encounter } from '../models';
+import { ENCOUNTERS_URL } from '../models/API';
 import { EncountersAPIService } from '../apiService/encounters';
-import { AliensAPIService } from '../apiService/aliens';
 import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-encounters',
   templateUrl: './encounters.component.html',
-  styleUrls: ['./encounters.component.scss']
+  styleUrls: ['./encounters.component.scss'],
+  providers: [ EncountersAPIService ]
 })
 export class EncountersComponent implements OnInit {
 
-  constructor() { }
+  encounters: Encounter[]
+
+  constructor(private encountersAPIService: EncountersAPIService) {    
+
+    this.getEncounters();
+
+}
+
+getEncounters() {
+    this.encountersAPIService.getEncounters()
+                      .subscribe((result) => {
+                        // console.log('Got encounters!', result);
+                        this.encounters = result;
+  });
+}
 
   ngOnInit() {
   }
