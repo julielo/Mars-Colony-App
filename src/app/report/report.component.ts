@@ -60,6 +60,7 @@ postNewEncounter(event) {
 
       const newEncounter: NewEncounter = new NewEncounter(atype, date, action, colonist_id);
       const encounterPostRequest = {encounter: newEncounter};
+      console.log('atype');
       this.encountersAPIService.saveNewEncounter( encounterPostRequest )
                               .subscribe((result) => {
                               console.log('Encounter was saved:', result);

@@ -6,7 +6,7 @@
     [ngClass]="{ 'submitting': submitting }" 
     (ngSubmit) = "postNewColonist($event)">    
     <fieldset>
-      <input type="text" placeholder="Name" formControlName="name" name="colonistName" >/>
+      <input type="text" class="invalid-input" placeholder="Name" formControlName="name" name="colonistName" >/>
       <input type="number" placeholder="Age" formControlName="age" name="colonistAge" />
       <select class="select-occupation" formControlName="job_id" name="job_id">          
         <option value="">Select occupation</option>
