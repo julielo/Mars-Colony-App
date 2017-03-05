@@ -18,7 +18,8 @@ export class RegisterComponent implements OnInit {
 
   marsJobs: Job[];
   registerForm: FormGroup;
-  clickedButton: boolean;
+  invalidInput: boolean;
+
 
   constructor(
     private colonistApiService: ColonistAPIService,
@@ -27,7 +28,7 @@ export class RegisterComponent implements OnInit {
     ) { 
     
     this.getMarsJobs();
-    this.clickedButton = false;
+    this.invalidInput = false;
     
     this.registerForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.maxLength(100)]),
@@ -61,6 +62,7 @@ export class RegisterComponent implements OnInit {
     console.log('Posting new colonist');
     if(this.registerForm.invalid) {
      console.log('form is invalid!');
+     this.invalidInput = true;
 
     } else {
       const name: string = this.registerForm.get('name').value;

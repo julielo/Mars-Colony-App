@@ -55,6 +55,12 @@ input::-webkit-input-placeholder {
     box-shadow: 0 0 1em red;
 }
 
+.invalid-input-msg {
+    color: red;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
 .select-occupation {
     font-size: 18px;
     color: #ed403e;
