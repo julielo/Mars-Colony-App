@@ -8,6 +8,7 @@ import { JobsAPIService } from '../apiService/jobs';
 import { Http, Response } from '@angular/http';
 
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

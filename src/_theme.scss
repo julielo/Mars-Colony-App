@@ -1,0 +1,12 @@
+// Variables
+
+$font__main: "Roboto", sans-serif;
+
+// Mixins
+@mixin button {
+    font-family: $font__main;
+    color: #fff;
+    background: #000;
+    border: 0;
+    font-size: 35px;
+}
