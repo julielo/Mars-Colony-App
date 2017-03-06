@@ -26,6 +26,7 @@ This is a web-based application for Earth colonists exploring Mars using Angular
 * Angular 2 (https://angular.io/)
 * JavaScript
 * Sass
+* GIMP (https://www.gimp.org/)
 
 ## Personal Learnings
 * Working with Angular 2 is relatively new to me. It was a little overwhelming with the new terminology but the more I worked with it, the more comfortable I became with this framework.
