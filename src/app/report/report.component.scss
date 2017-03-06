@@ -73,9 +73,12 @@ textarea {
     padding: 5px;
 }
 
+.bottom-section {
+    margin-top: 40px;
+}
+
 .submit-report-button {
     @include button;
-    margin-top: 40px;
 }
 
 .invalid-input-msg {

@@ -1,13 +1,14 @@
+@import '../../_theme.scss';
+
 .page {
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: $font__main;
+    text-align: center;
     color: #000;
     background-color: #fff;
     height: 100vh;
     width: 100vw;
-    text-align: center;
 }
 
 .top-section {
@@ -15,43 +16,36 @@
 }
 
 .title {
-    text-align: center;
     font-size: 36px;
-    font-weight: 100;
-    // padding-top: 35px;
 }
 
-p {
+h3 {
+    color: #000;
     text-align: center;
+    font-size: 18px;
 }
 
 .encounters-list {
     text-align: left;
     padding: 0 1rem 2rem;
     overflow: scroll;
-}
-
-.encounters-list li {
-    padding: 5px;
-}
-
-.encounters-list p {
     text-align: left;
 }
 
+.encounters-list li {
+    padding: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+.encounters-list p {
+    font-weight: normal;
+}
+
 .report-btn {
-    padding-top: 25px;
-    text-align: center;
-    background: #000;
-    width: 100vw;
- 
+    padding: 25px 0 0 25px;
 }
 
 .report-button {
-    font-family: "Roboto", sans-serif;
-    background-color: #000;
-    color: #fff;
-    font-size: 35px;
-    padding: 50px;
-    border: 0;
+    @include button;
 }
