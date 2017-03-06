@@ -2,7 +2,12 @@
 
 This is a web-based application for Earth colonists exploring Mars using Angular 2.
 
-
+### Objectives
+* Implement GET and POST HTTP requests using Angular's HTTP service to:
+    * Save a new Colonist's information
+    * Save a new Alien encounter
+    * Fetch a list of recent Alien encounters
+    * Create a new Encounter Report
 
 ## Screen captures
 
@@ -62,5 +67,6 @@ Before running the tests make sure you are serving the app via `ng serve`.
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ##To-Do
-* Improve form validation
-* Add animation for page transitions
+* Improve form validation.
+* Add animation for page transitions.
+* Improve animation on main page.
