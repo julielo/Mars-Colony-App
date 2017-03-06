@@ -7,14 +7,34 @@ This is a web-based application for Earth colonists exploring Mars using Angular
 ![Mars Colony] (mars1-screenshot.png)
 Home
 
-![Mars Colony] (app/images/mars2-screenshot.png)
+![Mars Colony] (mars2-screenshot.png)
 Register
 
-![Mars Colony] (app/images/mars3-screenshot.png)
+![Mars Colony] (mars3-screenshot.png)
 Encounters
 
-![Mars Colony] (app/images/mars4-screenshot.png)
+![Mars Colony] (mars4-screenshot.png)
 Report Encounter
+
+## Technologies Used
+* Visual Studio Code (https://code.visualstudio.com/)
+* Git Bash (https://git-for-windows.github.io/)
+* Windows PowerShell (https://msdn.microsoft.com/en-us/powershell/mt173057.aspx)
+* Google Chrome (https://www.google.com/chrome/)
+* Google Chrome Developer Tools
+* Fontface Ninja (Google Chrome extension)
+* Page Ruler (Google Chrome extension)
+* Eye Dropper (Google Chrome extension)
+* Angular 2 (https://angular.io/)
+* JavaScript
+* Sass
+
+## Personal Learnings
+* Working with Angular 2 is relatively new to me. It was a little overwhelming with the new terminology but the more I worked with it, the more comfortable I became with this framework.
+
+* Creating and validating forms is much easier than using strictly Javascript or JQuery. I hope to use Angular 2 in future projects.
+
+* The value of plugins and tools can be very helpful in identifying underlying issues in code or assist in making a website consistent across many browsers. The use of console.log and reviewing the error messages were especially helpful in troubleshooting.
 
 ## Usage
 
@@ -46,4 +66,6 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-
+##To-Do
+* Improve form validation
+* Add animation for page transitions
