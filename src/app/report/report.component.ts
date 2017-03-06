@@ -48,9 +48,7 @@ ngOnInit() {
 
 postNewEncounter(event) {
     event.preventDefault();
-    console.log('Posting new encounter');
     if(this.reportForm.invalid) {
-     console.log('form is invalid!');
      this.invalidInput = true;
 
     } else {
@@ -64,7 +62,6 @@ postNewEncounter(event) {
       console.log('atype');
       this.encountersAPIService.saveNewEncounter( encounterPostRequest )
                               .subscribe((result) => {
-                              console.log('Encounter was saved:', result);
       this.router.navigate(['encounters']);
                               }); 
     }   

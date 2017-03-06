@@ -23,7 +23,6 @@ export class EncountersComponent implements OnInit {
 getEncounters() {
     this.encountersAPIService.getEncounters()
                       .subscribe((result) => {
-                        // console.log('Got encounters!', result);
                         this.encounters = result;
   });
 }
