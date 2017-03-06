@@ -68,6 +68,8 @@ Before running the tests make sure you are serving the app via `ng serve`.
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ##To-Do
-* Improve form validation.
-* Add animation for page transitions.
-* Improve animation on main page.
+* Improve form validation
+* Add animation for page transitions
+* Improve animation on main page
+* Save the Colonist object in local storage
+* WordPress integration with the WP REST API (v2)
