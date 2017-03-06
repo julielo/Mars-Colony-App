@@ -17,7 +17,7 @@ export class ReportComponent implements OnInit {
 
   alienTypes: Alien[];
   reportForm: FormGroup;
-  clickedButton: boolean;
+  invalidInput: boolean;
 
   constructor(
     private aliensAPIService: AliensAPIService,
@@ -26,7 +26,7 @@ export class ReportComponent implements OnInit {
   ) { 
 
     this.getAlienTypes();
-    this.clickedButton;
+    this.invalidInput = false;
 
   this.reportForm = new FormGroup ({
     atype: new FormControl('',[Validators.required]),
@@ -51,6 +51,7 @@ postNewEncounter(event) {
     console.log('Posting new encounter');
     if(this.reportForm.invalid) {
      console.log('form is invalid!');
+     this.invalidInput = true;
 
     } else {
       const atype: string = this.reportForm.get('atype').value;

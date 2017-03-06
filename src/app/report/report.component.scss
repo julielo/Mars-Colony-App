@@ -1,55 +1,60 @@
+@import '../../_theme.scss';
+
 .page {
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
+    font-family: $font__main;
     background-color: #000;
     height: 100vh;
     width: 100vw;
     margin: 0 auto;
     text-align: center;
+}
 
+.top-section {
+    padding: 35px 0 35px 0;
 }
 
 .title {
+    color: #fff;
     text-align: center;
     font-size: 36px;
     font-weight: 100;
-    padding-top: 35px;
 }
 
-p {
+h3 {
+    color: #fff;
     text-align: center;
     font-size: 18px;
-
 }
 
-.alien-list {
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;*/
+.report-form {
+    margin-top: 35px;
+    margin: 0 auto;
+}
+
+.alien-report-fields {
     text-align: left;
-    width: 98%;
+    width: 85%;
+    margin-left: 30px;
 }
 
 .alien-type {
-    color: #ed403e;
+    color: $site__color__accent;
+    font-size: 20px;
     background: #000;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid #fff;
-    width: 97%;
-    padding-top: 30px;
+    width: 100%;
     padding-left: 10px;
-    /*margin-left: 25px;*/
     -webkit-appearance: none; /*removes dropdown arrow */
 }
 
 select {
     display: block;
     margin: 0 auto;
-    font-size: 15px;
 }
 
 select option {
@@ -61,24 +66,22 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     font-size: 18px;
-    color: #ed403e;
-    height: 200px;
+    color: $site__color__accent;
+    height: 175px;
     width: 96%;
     margin-top: 18px;
     padding: 5px;
 }
 
-.submit-report-btn {
- padding-top: 25px;
- text-align: center;
+.submit-report-button {
+    @include button;
+    margin-top: 40px;
 }
 
-.submit-report-button {
-    font-family: "Roboto", sans-serif;
-    color: #fff;
-    background-color: #000;
-    border: 0;
-    font-size: 35px;
-    padding: 50px;
+.invalid-input-msg {
+    color: $invalid__msg__color;
+    font-size: 1.5rem;
+    text-align: center;
 }
+
 

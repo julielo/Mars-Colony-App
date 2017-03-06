@@ -13,7 +13,7 @@
 .title {
     text-align: center;
     font-size: 36px;
-    color: $font__color__main;
+    color: #fff;
     padding: 35px 0 22px 0;
 }
 
@@ -33,7 +33,7 @@ input {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
     width: 82vw;
     padding: 12px 0 5px 10px;
 }
@@ -54,14 +54,14 @@ input::-webkit-input-placeholder {
 }
 
 .invalid-input-msg {
-    color: red;
+    color: $invalid__msg__color;
     font-size: 1.5rem;
     text-align: center;
 }
 
 .select-occupation {
     font-size: 20px;
-    color: #ed403e;
+    color: $site__color__accent;
     background: #000;
     border-top: 0;
     border-left: 0;
@@ -78,4 +78,6 @@ select option {
 
 .register-button {
     @include button;
+    margin-top: 150px;
+
 }

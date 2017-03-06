@@ -1,7 +1,8 @@
 // Variables
 
 $font__main: "Roboto", sans-serif;
-$font__color__main: #fff;
+$site__color__accent: #ed403e;
+$invalid__msg__color: red;
 
 // Mixins
 @mixin button {
@@ -12,5 +13,4 @@ $font__color__main: #fff;
     border: 0;   
     width: 100%;
     height: 83px;
-    margin-top: 150px;
 }

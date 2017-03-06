@@ -1,22 +1,23 @@
 <div class = "page">
   <div class="top-section">
     <h2 class="title">Report Encounter</h2>
-    <p>Safety on Mars is your responsibility</p>
+    <h3>Safety on Mars is your responsibility</h3>
   </div>
-  <form [formGroup]="reportForm"
-    class="report_form"
-    [ngClass]="{ 'submitting': submitting }"
-    (ngSubmit) = "postNewEncounter($event)">    
-  <div class="alien-list">
-      <select class="alien-type" formControlName="atype" name="atype">          
-        <option value="">Select alien type</option>
-        <option *ngFor="let alien of alienTypes" value="{{ alien.type }}">{{ alien.type }}</option>        
-      </select>
-
-      <textarea class="alien-action" required formControlName="action" name="alienAction">Action taken</textarea>
+  <div>
+    <form class="report_form"
+      [formGroup]="reportForm"    
+      (ngSubmit) = "postNewEncounter($event)">    
+      <div class="alien-report-fields">
+          <select class="alien-type" formControlName="atype" name="atype" [ngClass]="{ 'invalid-input': invalidInput }">          
+            <option value="">Select alien type</option>
+            <option *ngFor="let alien of alienTypes" value="{{ alien.type }}" >{{ alien.type }}</option>       
+          </select>
+          <textarea class="alien-action" placeholder="Action taken" formControlName="action" name="alienAction" [ngClass]="{ 'invalid-input': invalidInput }">Action taken</textarea>
+      </div>
+      <div>
+        <button class="submit-report-button">Submit Report</button>
+        <p [ngClass]="{ 'invalid-input-msg': invalidInput }" >Invalid input. Please try again.</p>
+      </div>
+    </form>
   </div>
-  <div class = "submit-report-btn">
-    <button class="submit-report-button">Submit Report</button>
-  </div>
-  </form>
 </div>
