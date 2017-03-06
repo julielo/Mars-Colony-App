@@ -2,12 +2,11 @@
 
 This is a web-based application for Earth colonists exploring Mars using Angular 2.
 
+
+
 ## Screen captures
 
-![Mars Colony] (mars1-screenshot.png)
-Home
-
-![Mars Colony] (mars2-screenshot.png)
+![Mars Colony] (mars1-screenshot.png) - Home |![Mars Colony] (mars2-screenshot.png)
 Register
 
 ![Mars Colony] (mars3-screenshot.png)
