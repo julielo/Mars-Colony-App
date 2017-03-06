@@ -1,6 +1,26 @@
-# MarsColony
+# Mars Colony App
+
+This is a web-based application for Earth colonists exploring Mars using Angular 2.
+
+## Screen captures
+
+![Mars Colony] (mars1-screenshot.png)
+Home
+
+![Mars Colony] (app/images/mars2-screenshot.png)
+Register
+
+![Mars Colony] (app/images/mars3-screenshot.png)
+Encounters
+
+![Mars Colony] (app/images/mars4-screenshot.png)
+Report Encounter
+
+## Usage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
+
+Listed below are the instructions used to develop this application.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -25,3 +45,5 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
