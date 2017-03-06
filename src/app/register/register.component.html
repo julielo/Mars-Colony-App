@@ -1,10 +1,9 @@
-<div class = "page">
+<div class = "page container">
   <h2 class="title">Register</h2>
-  
   <form [formGroup]="registerForm" 
     class="register_form"     
-    (ngSubmit) = "postNewColonist($event)">    
-    <fieldset>
+    (ngSubmit) = "postNewColonist($event)">
+    <fieldset class="input-fields">
       <input type="text" placeholder="Name" formControlName="name" name="colonistName" [ngClass]="{ 'invalid-input': invalidInput }"/>
       <input type="number" placeholder="Age" formControlName="age" name="colonistAge" [ngClass]="{ 'invalid-input': invalidInput }" />
       <select class="select-occupation" formControlName="job_id" name="job_id" [ngClass]="{ 'invalid-input': invalidInput }">          
@@ -15,10 +14,12 @@
     <fieldset class="reg-btn">
       <!--<button type="button"  >Log colonist</button>-->
       <!--<a routerLink="/encounters">-->
-      <p [ngClass]="{ 'invalid-input-msg': invalidInput }" >Invalid input. Please try again.</p>
+      
       <button class="register-button">Check in</button>
+      <p [ngClass]="{ 'invalid-input-msg': invalidInput }" >Invalid input. Please try again.</p>
       <!--</a>-->
     </fieldset>
   </form>
+  
 </div>
 
