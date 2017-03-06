@@ -36,6 +36,8 @@ Report Encounter
 
 * The value of plugins and tools can be very helpful in identifying underlying issues in code or assist in making a website consistent across many browsers. The use of console.log and reviewing the error messages were especially helpful in troubleshooting.
 
+* Visual Studio Code is a lot more functional than my previous code editor (Atom), especially for a Windows user.
+
 ## Usage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
