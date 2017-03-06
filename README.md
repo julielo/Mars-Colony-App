@@ -6,14 +6,8 @@ This is a web-based application for Earth colonists exploring Mars using Angular
 
 ## Screen captures
 
-![Mars Colony] (mars1-screenshot.png) - Home |![Mars Colony] (mars2-screenshot.png)
-Register
+![Mars Colony] (mars-screenshot.png) 
 
-![Mars Colony] (mars3-screenshot.png)
-Encounters
-
-![Mars Colony] (mars4-screenshot.png)
-Report Encounter
 
 ## Technologies Used
 * Visual Studio Code (https://code.visualstudio.com/)
@@ -35,7 +29,7 @@ Report Encounter
 
 * The value of plugins and tools can be very helpful in identifying underlying issues in code or assist in making a website consistent across many browsers. The use of console.log and reviewing the error messages were especially helpful in troubleshooting.
 
-* Visual Studio Code is a lot more functional than my previous code editor (Atom), especially for a Windows user.
+* Visual Studio Code is a lot more functional than my previous code editor (Atom), especially for a Windows user. Only function I miss is the preview feature for markdowns on Atom.
 
 ## Usage
 
