@@ -1,12 +1,8 @@
 @import '../../_theme.scss';
 
-.container {
-    display: flex;
-    flex-direction: column;    
-}
-
 .page {
-
+    display: flex;
+    flex-direction: column;
     font-family: $font__main;    
     background-color: #000;
     height: 100vh;
@@ -32,13 +28,13 @@ form {
 input {
     display: block;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     background: #000;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid white;
-    width: 84vw;
+    width: 82vw;
     padding: 12px 0 5px 10px;
 }
 
@@ -64,14 +60,14 @@ input::-webkit-input-placeholder {
 }
 
 .select-occupation {
-    font-size: 18px;
+    font-size: 20px;
     color: #ed403e;
     background: #000;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid #fff;
-    width: 86.5vw;
+    width: 84.5vw;
     padding: 14px 0 0 10px;
     -webkit-appearance: none; //removes dropdown arrow
 }

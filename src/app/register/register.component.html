@@ -1,7 +1,7 @@
-<div class = "page container">
+<div class = "page">
   <h2 class="title">Register</h2>
-  <form [formGroup]="registerForm" 
-    class="register_form"     
+  <form class="register_form" 
+    [formGroup]="registerForm"
     (ngSubmit) = "postNewColonist($event)">
     <fieldset class="input-fields">
       <input type="text" placeholder="Name" formControlName="name" name="colonistName" [ngClass]="{ 'invalid-input': invalidInput }"/>
@@ -11,15 +11,10 @@
         <option *ngFor="let job of marsJobs" value="{{ job.id }}">{{ job.name }}</option>        
       </select>
     </fieldset>
-    <fieldset class="reg-btn">
-      <!--<button type="button"  >Log colonist</button>-->
-      <!--<a routerLink="/encounters">-->
-      
+    <fieldset>      
       <button class="register-button">Check in</button>
       <p [ngClass]="{ 'invalid-input-msg': invalidInput }" >Invalid input. Please try again.</p>
-      <!--</a>-->
     </fieldset>
-  </form>
-  
+  </form>  
 </div>
 
