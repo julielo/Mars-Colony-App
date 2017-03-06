@@ -1,111 +1,105 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+// /* http://meyerweb.com/eric/tools/css/reset/ 
+//    v2.0 | 20110126
+//    License: none (public domain)
+// */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+// html, body, div, span, applet, object, iframe,
+// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+// a, abbr, acronym, address, big, cite, code,
+// del, dfn, em, img, ins, kbd, q, s, samp,
+// small, strike, strong, sub, sup, tt, var,
+// b, u, i, center,
+// dl, dt, dd, ol, ul, li,
+// fieldset, form, label, legend,
+// table, caption, tbody, tfoot, thead, tr, th, td,
+// article, aside, canvas, details, embed, 
+// figure, figcaption, footer, header, hgroup, 
+// menu, nav, output, ruby, section, summary,
+// time, mark, audio, video {
+// 	margin: 0;
+// 	padding: 0;
+// 	border: 0;
+// 	font-size: 100%;
+// 	font: inherit;
+// 	vertical-align: baseline;
+// }
+// /* HTML5 display-role reset for older browsers */
+// article, aside, details, figcaption, figure, 
+// footer, header, hgroup, menu, nav, section {
+// 	display: block;
+// }
+// body {
+// 	line-height: 1;
+// }
+// ol, ul {
+// 	list-style: none;
+// }
+// blockquote, q {
+// 	quotes: none;
+// }
+// blockquote:before, blockquote:after,
+// q:before, q:after {
+// 	content: '';
+// 	content: none;
+// }
+// table {
+// 	border-collapse: collapse;
+// 	border-spacing: 0;
+// }
 
+@import '../../_theme.scss';
 
 .page {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Roboto', sans-serif;
+    font-family: $font__main;
     color: #fff;
     background: linear-gradient( 0deg, #f27b7b,#353434 );
     height: 100vh;
     width: 100vw;
 }
 
+.top-section {
+    margin: 50px;
+}
+
 .title {
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
-    font-weight: 100;
 }
 
-.enter-button {
-  height: 100px;
-  width: 100px;
-  margin: 0 auto;
+.button {
+  align-self: center;
+}
+
+.fingerprint {
+  width: 147px;
+  height: 200px;
+  box-shadow: 0px 0px 14px 7px rgba(255,255,255,0.1);
   border-radius: 100%;
-  /*background: radial-gradient(#905a5a, #995b5b);*/
-  animation-name: stretch;
-  animation-duration: 1.75s; 
-  animation-timing-function: ease-in; 
-  animation-delay: 1;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  animation-play-state: running;
+  animation: pulse 4s infinite;
 }
 
-@keyframes stretch {
+@keyframes pulse {
   0% {
-    transform: scale(.7);
-    background-color: rgba(154,94,94,0.5);
-    border-radius: 100%;
+    box-shadow: 0 0 0 2px rgba(255,255,255, 0.1);
   }
-  25% {
-    transform: scale(.7);
-    background-color: rgba(255,255,255,0.1);  
-  }
+  
   50% {
-    transform: scale(.7);
-    background-color: rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 4px rgba(255,255,255, 0.4);
   }
+  
   100% {
-    transform: scale(1.2);
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 100%
+      box-shadow: 0 0 0 10px rgba(255,255,255, 0);
   }
 }
 
+.bottom-section {
+  margin: 100px 0;
+}
 .tap-message {
     text-align: center;
-    font-weight: 100;
     font-size: 32px;
-    line-height: 32px;
+    line-height: 2px;
 }
